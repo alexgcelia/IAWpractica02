@@ -29,3 +29,14 @@ sudo systemctl start mysqld
 
 #Habilitamos el servicio para que se inicie automáticamente después de cada reinicio.
 sudo systemctl enable mysqld
+
+#-------------------
+#Instalación de PHP
+#-------------------
+sudo dnf install php -y
+
+#Instalamos la extensión de PHP para conectar con MySQL
+sudo dnf install php-mysqlnd -y
+
+#Después de la instalación, reiniciar el servicio de Apache
+sudo systemctl restart httpd
